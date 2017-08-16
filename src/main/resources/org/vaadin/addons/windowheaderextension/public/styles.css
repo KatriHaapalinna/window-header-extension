@@ -1,0 +1,42 @@
+.windowheader-button {
+	position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33px;
+    height: 36px;
+    background-color: white;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 21px;
+    color: #999999;
+    -webkit-transition: color 140ms;
+    -moz-transition: color 140ms;
+    transition: color 140ms;
+    border-radius: 0px 0px 0px 4px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #cdcdcd;
+    color: #fff;
+    display: -webkit-box;
+    text-align: left;
+    padding: 0px 4px;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0px;
+    border-radius: 0px 4px 4px 4px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show tooltip text when mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
