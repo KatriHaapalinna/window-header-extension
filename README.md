@@ -1,4 +1,4 @@
-# windowheaderextension
+# Window Header Extension
 
 This is a Vaadin add-on project created with in.virit:vaadin-gwt-addon archetype.
 The project supports GWT based extensions for Vaadin.
