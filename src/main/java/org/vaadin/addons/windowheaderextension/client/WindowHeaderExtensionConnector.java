@@ -59,14 +59,19 @@ public class WindowHeaderExtensionConnector extends AbstractExtensionConnector {
 
         buttonDiv = DOM.createDiv();
         buttonDiv.addClassName(CLASSNAME + "-button");
-        buttonDiv.addClassName("tooltip");
-
-        Element tooltip = DOM.createSpan();
-        tooltip.addClassName("tooltiptext");
-        tooltip.setInnerText(getState().tooltipText);
-
         buttonDiv.setInnerHTML(getState().iconHtml);
-        buttonDiv.appendChild(tooltip);
+
+        // if tooltip is not null or empty, add to div
+        if (getState().tooltipText != null
+                && !getState().tooltipText.trim().isEmpty()) {
+            buttonDiv.addClassName("tooltip");
+
+            Element tooltip = DOM.createSpan();
+            tooltip.addClassName("tooltiptext");
+            tooltip.setInnerText(getState().tooltipText.trim());
+
+            buttonDiv.appendChild(tooltip);
+        }
 
         Style s = buttonDiv.getStyle();
         double visibleChildren = window.header.getChildCount() - 1;

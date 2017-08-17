@@ -33,7 +33,7 @@ public class BasicMyComponentUsageUI extends AbstractTest {
                 w.setWidth("200");
                 // additional buttons to window
                 WindowHeaderExtension.extend(w, FontAwesome.AMBULANCE,
-                        "I say hello", new WindowButtonClickListener() {
+                        "  I say hello", new WindowButtonClickListener() {
 
                             @Override
                             public void buttonClicked() {
@@ -43,8 +43,8 @@ public class BasicMyComponentUsageUI extends AbstractTest {
                             }
 
                         });
-                WindowHeaderExtension.extend(w, FontAwesome.APPLE,
-                        "I do other things", new WindowButtonClickListener() {
+                WindowHeaderExtension.extend(w, FontAwesome.APPLE, "",
+                        new WindowButtonClickListener() {
 
                             @Override
                             public void buttonClicked() {
