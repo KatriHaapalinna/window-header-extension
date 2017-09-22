@@ -82,6 +82,8 @@ public class WindowHeaderExtensionConnector extends AbstractExtensionConnector {
         window.header.insertFirst(buttonDiv);
         addButtonClickListener(buttonDiv);
 
+        Element caption = (Element) window.header.getLastChild();
+        caption.getStyle().setHeight(36, Style.Unit.PX);
     }
 
     public native void addButtonClickListener(Element el)

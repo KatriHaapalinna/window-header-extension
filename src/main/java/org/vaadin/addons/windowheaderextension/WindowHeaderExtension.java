@@ -33,24 +33,39 @@ public class WindowHeaderExtension extends AbstractExtension {
     }
 
     /**
-     * Adds additional header button to Window
+     * Add additional header button (icon) with tooltip to Window
      *
-     * @param w
+     * @param win
      *            Window
      * @param icon
-     *            FontAwesome Icon
+     *            FontAwesome icon
      * @param tooltipText
      *            text for button tooltip
      * @param clickListener
      *            WindowButtonClicklistener
      */
-    public static void extend(Window w, FontAwesome icon, String tooltipText,
+    public static void extend(Window win, FontAwesome icon, String tooltipText,
             WindowButtonClickListener clickListener) {
         WindowHeaderExtension ex = new WindowHeaderExtension();
         ex.getState().iconHtml = icon.getHtml();
         ex.getState().tooltipText = tooltipText;
         ex.listeners.add(clickListener);
-        ex.extend(w);
+        ex.extend(win);
+    }
+
+    /**
+     * Add addtitional header button (icon) to Window
+     *
+     * @param win
+     *            Window
+     * @param icon
+     *            FontAwesome icon
+     * @param clickListener
+     *            WindowButtonClicklistener
+     */
+    public static void extend(Window win, FontAwesome icon,
+            WindowButtonClickListener clickListener) {
+        extend(win, icon, "", clickListener);
     }
 
 }
