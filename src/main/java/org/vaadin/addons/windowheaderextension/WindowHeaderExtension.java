@@ -33,7 +33,7 @@ public class WindowHeaderExtension extends AbstractExtension {
     }
 
     /**
-     * Add additional header button (icon) with tooltip to Window
+     * Add header button (icon) with tooltip to Window
      *
      * @param win
      *            Window
@@ -54,7 +54,7 @@ public class WindowHeaderExtension extends AbstractExtension {
     }
 
     /**
-     * Add addtitional header button (icon) to Window
+     * Add header button (icon) to Window
      *
      * @param win
      *            Window
