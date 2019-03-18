@@ -8,7 +8,7 @@
     <organization>
         <name>Vaadin Community</name>
     </organization>
-    <name>WindowHeaderExtension</name>
+    <name>Window Header Extension</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <vaadin.version>7.7.17</vaadin.version>
