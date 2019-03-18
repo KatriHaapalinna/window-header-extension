@@ -5,7 +5,7 @@
 	<groupId>com.vaadin.addons</groupId>
 	<artifactId>window-header-extension-demo</artifactId>
 	<packaging>war</packaging>
-	<version>1.1</version>
+	<version>2.0</version>
 	<name>WindowHeaderExtension Demo</name>
 
 	<prerequisites>
@@ -16,8 +16,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<vaadin.version>7.7.17</vaadin.version>
-		<vaadin.plugin.version>7.7.17</vaadin.plugin.version>
+		<vaadin.version>8.7.1</vaadin.version>
+		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 		<jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
 	</properties>
 
