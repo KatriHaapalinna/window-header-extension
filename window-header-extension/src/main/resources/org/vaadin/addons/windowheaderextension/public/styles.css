@@ -48,7 +48,7 @@
     visibility: visible;
 }
 /* same focus effects as for default buttons */
-.demo .windowheader-button:focus::after, .demo .v-windowheader-button:focus::after {
+.windowheader-button:focus::after, .v-windowheader-button:focus::after {
 	content: "";
     position: absolute;
     top: 6px;
