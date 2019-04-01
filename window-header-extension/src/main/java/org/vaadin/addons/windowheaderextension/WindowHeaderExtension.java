@@ -43,14 +43,34 @@ public class WindowHeaderExtension extends AbstractExtension {
      *            text for button tooltip
      * @param clickListener
      *            WindowButtonClicklistener
+     * @param ariaLabel
+     *            accessibility description
      */
     public static void extend(Window win, FontAwesome icon, String tooltipText,
-            WindowButtonClickListener clickListener) {
+            WindowButtonClickListener clickListener, String ariaLabel) {
         WindowHeaderExtension ex = new WindowHeaderExtension();
         ex.getState().iconHtml = icon.getHtml();
         ex.getState().tooltipText = tooltipText;
+        ex.getState().ariaLabel = ariaLabel;
         ex.listeners.add(clickListener);
         ex.extend(win);
+    }
+
+    /**
+     * Add header button (icon) to Window
+     *
+     * @param win
+     *            Window
+     * @param icon
+     *            FontAwesome icon
+     * @param clickListener
+     *            WindowButtonClicklistener
+     * @param ariaLabel
+     *            accessibility description
+     */
+    public static void extend(Window win, FontAwesome icon,
+            WindowButtonClickListener clickListener, String ariaLabel) {
+        extend(win, icon, "", clickListener, ariaLabel);
     }
 
     /**
@@ -65,7 +85,7 @@ public class WindowHeaderExtension extends AbstractExtension {
      */
     public static void extend(Window win, FontAwesome icon,
             WindowButtonClickListener clickListener) {
-        extend(win, icon, "", clickListener);
+        extend(win, icon, "", clickListener, "");
     }
 
 }

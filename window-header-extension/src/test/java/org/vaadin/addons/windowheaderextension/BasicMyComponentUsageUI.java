@@ -46,7 +46,7 @@ public class BasicMyComponentUsageUI extends AbstractTest {
                                 JavaScript js = JavaScript.getCurrent();
                                 js.execute("window.alert('hello!');");
                             }
-                        });
+                        }, "hello button");
                 WindowHeaderExtension.extend(w, FontAwesome.GITHUB,
                         "Source code", new WindowButtonClickListener() {
 
@@ -67,7 +67,7 @@ public class BasicMyComponentUsageUI extends AbstractTest {
                                 });
                                 vl.addComponent(b);
                             }
-                        });
+                        }, "GitHub button");
                 WindowHeaderExtension.extend(w, FontAwesome.CAMERA_RETRO,
                         new WindowButtonClickListener() {
 

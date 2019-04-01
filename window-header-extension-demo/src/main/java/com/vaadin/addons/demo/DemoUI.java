@@ -33,16 +33,17 @@ public class DemoUI extends UI {
         final VerticalLayout layout = new VerticalLayout();
         layout.setStyleName("demoContentLayout");
         layout.setSizeFull();
-        
+
         Button button = new Button("Open window", e -> {
-        	Window w = new Window("Window Header", new Label("Window Content"));
-        	w.setHeight("25%");
-        	w.setWidth("25%");
-        	w.center();
-        	WindowHeaderExtension.extend(w, FontAwesome.GITHUB, () -> {
-        		Notification.show("You clicked a custom button!");
-        	});
-        	UI.getCurrent().addWindow(w);
+            Window w = new Window("Window Header", new Label("Window Content"));
+            w.setHeight("25%");
+            w.setWidth("25%");
+            w.center();
+            WindowHeaderExtension.extend(w, FontAwesome.GITHUB, "GitHub",
+                    () -> {
+                        Notification.show("You clicked a custom button!");
+                    }, "GitHub button");
+            UI.getCurrent().addWindow(w);
         });
         layout.addComponents(button);
         setContent(layout);
