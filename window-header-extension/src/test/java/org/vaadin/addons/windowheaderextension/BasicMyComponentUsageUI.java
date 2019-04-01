@@ -1,6 +1,7 @@
 package org.vaadin.addons.windowheaderextension;
 
 import org.vaadin.addonhelpers.AbstractTest;
+import org.vaadin.addons.windowheaderextension.WindowHeaderExtension.WindowButtonClickListener;
 
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Button;
@@ -46,7 +47,7 @@ public class BasicMyComponentUsageUI extends AbstractTest {
                                 JavaScript js = JavaScript.getCurrent();
                                 js.execute("window.alert('hello!');");
                             }
-                        });
+                        }, "hello button");
                 WindowHeaderExtension.extend(w, FontAwesome.GITHUB,
                         "Source code", new WindowButtonClickListener() {
 
@@ -67,7 +68,7 @@ public class BasicMyComponentUsageUI extends AbstractTest {
                                 });
                                 vl.addComponent(b);
                             }
-                        });
+                        }, "GitHub button");
                 WindowHeaderExtension.extend(w, FontAwesome.CAMERA_RETRO,
                         new WindowButtonClickListener() {
 

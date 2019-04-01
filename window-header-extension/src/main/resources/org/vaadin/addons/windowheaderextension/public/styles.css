@@ -18,6 +18,8 @@
     -moz-transition: color 140ms;
     transition: color 140ms;
     border-radius: 0px 0px 0px 4px;
+    padding-left: 4px;
+    outline: none;
 }
 
 /* Tooltip text */
@@ -37,8 +39,23 @@
     position: fixed;
     z-index: 1;
 }
-
+/* same colour as default valo hover colour of the default buttons*/
+.windowheader-button:hover {
+	color: #197de1;
+}
 /* Show tooltip text when mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+/* same focus effects as for default buttons */
+.demo .windowheader-button:focus::after, .demo .v-windowheader-button:focus::after {
+	content: "";
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    bottom: 6px;
+    left: 6px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+    box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);	
 }
