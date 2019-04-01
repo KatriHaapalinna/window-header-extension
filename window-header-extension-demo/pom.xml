@@ -5,7 +5,7 @@
 	<groupId>com.vaadin.addons</groupId>
 	<artifactId>window-header-extension-demo</artifactId>
 	<packaging>war</packaging>
-	<version>1.2</version>
+	<version>1.1.0</version>
 	<name>WindowHeaderExtension Demo</name>
 
 	<prerequisites>
